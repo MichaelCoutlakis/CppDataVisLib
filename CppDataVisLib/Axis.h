@@ -1,3 +1,8 @@
+/***************************************************************************//**
+* \brief
+* \copyright	Michael Coutlakis 2021
+* \license		MIT License, see the LICENSE file.
+*******************************************************************************/
 #pragma once
 
 #include <string>
@@ -8,17 +13,17 @@
 namespace dvis
 {
 
-	class cAxis
+	class Axis
 	{
 	public:
-		Real m_Min;
-		Real m_Max;
+		Real m_min;
+		Real m_max;
 		/// Number of labels to use in fixed interval mode
-		size_t m_uNumLabels;
+		size_t m_num_labels;
 
-		std::string m_strAxisLabel;
+		std::string m_label;
 
 		/// How the renderer should scale the axis labels
-		eAxisScale m_AxisScaleMode = eAxisScale::Auto;
+		AxisScale m_scale_mode = AxisScale::Auto;
 	};
 }

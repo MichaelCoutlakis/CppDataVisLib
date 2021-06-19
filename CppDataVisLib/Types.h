@@ -1,53 +1,58 @@
+/***************************************************************************//**
+* \brief
+* \copyright	Michael Coutlakis 2021
+* \license		MIT License, see the LICENSE file.
+*******************************************************************************/
 #pragma once
 
 namespace dvis
 {
 
-	using FontUnit = int;
+using FontUnit = int;
 
-	using Real = double;
-
-
-	class cCoordXY
-	{
-	public:
-		Real m_X;
-		Real m_Y;
-	};
-
-	class cRectArea
-	{
-	public:
-		Real m_Width;
-		Real m_Height;
-	};
-
-	enum class eHorizontalPlacement
-	{
-		Left,
-		Centre,
-		Right,
-	};
+using Real = double;
 
 
-	enum class eVerticalPlacement
-	{
-		Top,
-		Middle,
-		Bottom,
-	};
+class CoordXY
+{
+public:
+	Real m_x;
+	Real m_y;
+};
 
-	enum class eDocking
-	{
-		Inner,
-		Outer,
-	};
+class RectArea
+{
+public:
+	Real m_width;
+	Real m_height;
+};
+
+enum class HorizontalPlacement
+{
+	Left,
+	Centre,
+	Right,
+};
 
 
-	enum class eAxisScale
-	{
-		Auto,
-		FixedInterval,
-	};
+enum class VerticalPlacement
+{
+	Top,
+	Middle,
+	Bottom,
+};
+
+enum class Docking
+{
+	Inner,
+	Outer,
+};
+
+
+enum class AxisScale
+{
+	Auto,
+	FixedInterval,
+};
 
 }

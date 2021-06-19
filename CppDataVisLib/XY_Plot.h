@@ -1,3 +1,8 @@
+/***************************************************************************//**
+* \brief
+* \copyright	Michael Coutlakis 2021
+* \license		MIT License, see the LICENSE file.
+*******************************************************************************/
 #pragma once
 
 #include <vector>
@@ -9,38 +14,39 @@
 
 namespace dvis
 {
-	class cXY_Plot : public cPlot
+	class XY_Plot : public Plot
 	{
 	public:
-		cXY_Plot
+		XY_Plot
 		(
-			const std::vector<double>& vdX,
-			const std::vector<double>& vdY,
-			const std::string& strX_Label = "",
-			const std::string& strY_Label = ""
+			const std::vector<double>& x,
+			const std::vector<double>& y,
+			const std::string& x_label = "",
+			const std::string& y_label = ""
 		) :
-			m_vdX(vdX),
-			m_vdY(vdY)
+			m_x(x),
+			m_y(y)
 		{
-			m_pAxisX_Bottom = std::make_shared<cAxis>();
-			m_pAxisY_Left = std::make_shared<cAxis>();
+			m_x_axis_bottom = std::make_shared<Axis>();
+			m_y_axis_left = std::make_shared<Axis>();
 
-			SetX_Label(strX_Label);
-			SetY_Label(strY_Label);
+			SetX_Label(x_label);
+			SetY_Label(y_label);
 		}
+		virtual ~XY_Plot() {}
 		// Need some representation of the series.... . This initial approach will need to be extended
-		std::vector<double> m_vdX;
-		std::vector<double> m_vdY;
+		std::vector<double> m_x;
+		std::vector<double> m_y;
 		
-		std::shared_ptr<cAxis> m_pAxisX_Bottom;
-		std::shared_ptr<cAxis> m_pAxisY_Left;
+		std::shared_ptr<Axis> m_x_axis_bottom;
+		std::shared_ptr<Axis> m_y_axis_left;
 
 
-		void SetX_Label(std::string strX_Label) { if (m_pAxisX_Bottom) m_pAxisX_Bottom->m_strAxisLabel = strX_Label; }
-		void SetY_Label(std::string strY_Label) { if (m_pAxisY_Left) m_pAxisY_Left->m_strAxisLabel = strY_Label; }
+		void SetX_Label(std::string x_label) { if (m_x_axis_bottom) m_x_axis_bottom->m_label = x_label; }
+		void SetY_Label(std::string y_label) { if (m_y_axis_left) m_y_axis_left->m_label = y_label; }
 
 
-		void Render(std::shared_ptr<cBackend> pBackend) override { pBackend->RenderXY_Plot(this); }
+		void Render(std::shared_ptr<Backend> pBackend) override { pBackend->RenderXY_Plot(this); }
 	private:
 	};
 }

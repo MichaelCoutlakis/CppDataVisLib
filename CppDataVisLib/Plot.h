@@ -1,15 +1,21 @@
+/***************************************************************************//**
+* \brief
+* \copyright	Michael Coutlakis 2021
+* \license		MIT License, see the LICENSE file.
+*******************************************************************************/
 #pragma once
 
 #include <memory>
 
 namespace dvis
 {
-	class cBackend;
+	class Backend;
 
-	class cPlot
+	class Plot
 	{
 	public:
-		virtual void Render(std::shared_ptr<cBackend> pBackend) = 0;
+		virtual ~Plot() {}
+		virtual void Render(std::shared_ptr<Backend> backend) = 0;
 	private:
 	};
 }

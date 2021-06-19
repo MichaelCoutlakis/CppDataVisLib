@@ -1,3 +1,8 @@
+/***************************************************************************//**
+* \brief
+* \copyright	Michael Coutlakis 2021
+* \license		MIT License, see the LICENSE file.
+*******************************************************************************/
 #pragma once
 
 #include <vector>
@@ -11,10 +16,10 @@ namespace dvis
 	{
 	public:
 		//std::vector<std::shared_ptr
-		virtual void SetChartArea(const cRectArea& Area) = 0;
+		virtual void SetChartArea(const RectArea& Area) = 0;
 
 
-		virtual void Zoom(cCoordXY LowerLeft, cCoordXY UpperRight) = 0;
+		virtual void Zoom(CoordXY LowerLeft, CoordXY UpperRight) = 0;
 
 
 	};

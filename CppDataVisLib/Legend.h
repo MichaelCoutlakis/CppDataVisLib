@@ -1,3 +1,8 @@
+/***************************************************************************//**
+* \brief
+* \copyright	Michael Coutlakis 2021
+* \license		MIT License, see the LICENSE file.
+*******************************************************************************/
 #pragma once
 
 #include <string>
@@ -8,19 +13,19 @@
 
 namespace dvis
 {
-	class cLegend
+	class Legend
 	{
 	public:
-		cLegend(eDocking Docking, eHorizontalPlacement Horiz, eVerticalPlacement Vert) :
-			m_Docking(Docking),
-			m_Horiz(Horiz),
-			m_Vert(Vert)
+		Legend(Docking Docking, HorizontalPlacement Horiz, VerticalPlacement Vert) :
+			m_docking(Docking),
+			m_horiz_pos(Horiz),
+			m_vert_pos(Vert)
 		{
 
 		}
-		eDocking m_Docking;
-		eHorizontalPlacement m_Horiz;
-		eVerticalPlacement m_Vert;
+		Docking m_docking;
+		HorizontalPlacement m_horiz_pos;
+		VerticalPlacement m_vert_pos;
 	private:
 	};
 }
