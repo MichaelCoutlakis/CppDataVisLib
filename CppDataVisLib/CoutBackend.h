@@ -16,12 +16,13 @@ namespace dvis
 	class CoutBackend : public Backend
 	{
 	public:
-		void RenderFigure(/*std::shared_ptr<Figure>*/Figure* pFig) override
+		void RenderFigure(Figure* pFig) override
 		{
 			std::cout << "Rendering Figure " << std::endl;
 			std::cout << "Title: " << pFig->Title() << std::endl;
+			std::cout << "ID: " << pFig->ID() << std::endl;
 		}
-		void RenderXY_Plot(/*std::shared_ptr<XY_Plot>*/XY_Plot* pXY_Plot) override
+		void RenderXY_Plot(Figure* fig, XY_Plot* pXY_Plot) override
 		{
 			std::cout << "Rendering XY Plot" << std::endl;
 			std::cout << "x-axis: Label: " << pXY_Plot->m_x_axis_bottom->m_label << std::endl;

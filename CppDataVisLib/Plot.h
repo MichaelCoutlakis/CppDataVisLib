@@ -15,7 +15,8 @@ namespace dvis
 	{
 	public:
 		virtual ~Plot() {}
-		virtual void Render(std::shared_ptr<Backend> backend) = 0;
+		virtual void Render(Figure* fig, std::shared_ptr<Backend> backend) = 0;
+		virtual void Render(Figure* fig, Backend* backend) = 0;
 	private:
 	};
 }
