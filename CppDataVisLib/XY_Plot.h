@@ -11,6 +11,7 @@
 #include "Plot.h"
 #include "Axis.h"
 #include "Legend.h"
+#include "Visitor.h"
 
 namespace dvis
 {
@@ -47,8 +48,9 @@ public:
 	void SetY_Label(std::string y_label) { if(m_y_axis_left) m_y_axis_left->m_label = y_label; }
 
 
-	void Render(Figure* fig, std::shared_ptr<Backend> pBackend) override { pBackend->RenderXY_Plot(fig, this); }
-	void Render(Figure* fig, Backend* backend) override { backend->RenderXY_Plot(fig, this); }
+	//void Render(Figure* fig, std::shared_ptr<Backend> pBackend) override { pBackend->RenderXY_Plot(fig, this); }
+	//void Render(Figure* fig, Backend* backend) override { backend->RenderXY_Plot(fig, this); }
+	void WelcomeVisitor(Visitor* visitor) override { visitor->Visit(this); }
 private:
 };
 

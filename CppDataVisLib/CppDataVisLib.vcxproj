@@ -143,11 +143,14 @@
     <ClInclude Include="Backend.h" />
     <ClInclude Include="Chart.h" />
     <ClInclude Include="CoutBackend.h" />
+    <ClInclude Include="Element.h" />
+    <ClInclude Include="Factory.h" />
     <ClInclude Include="Figure.h" />
     <ClInclude Include="Legend.h" />
     <ClInclude Include="Plot.h" />
     <ClInclude Include="Title.h" />
     <ClInclude Include="Types.h" />
+    <ClInclude Include="Visitor.h" />
     <ClInclude Include="XY_Plot.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -7,23 +7,27 @@
 
 #include <string>
 
+#include "Element.h"
 #include "Types.h"
 
 
 namespace dvis
 {
 
-	class Axis
-	{
-	public:
-		Real m_min;
-		Real m_max;
-		/// Number of labels to use in fixed interval mode
-		size_t m_num_labels;
+class Axis : public Element
+{
+public:
+	void WelcomeVisitor(Visitor* visitor) override {}
 
-		std::string m_label;
+	Real m_min;
+	Real m_max;
+	/// Number of labels to use in fixed interval mode
+	size_t m_num_labels;
 
-		/// How the renderer should scale the axis labels
-		AxisScale m_scale_mode = AxisScale::Auto;
-	};
+	std::string m_label;
+
+	/// How the renderer should scale the axis labels
+	AxisScale m_scale_mode = AxisScale::Auto;
+};
+
 }

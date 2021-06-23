@@ -9,21 +9,21 @@
 
 #include "Types.h"
 
-namespace dvis
-{
-	class Title
-	{
-	public:
-		Title(const std::string& title) :
-			m_title(title)
-		{
-
-		}
-		std::string m_title;
-		HorizontalPlacement m_horiz_pos = HorizontalPlacement::Centre;
-		VerticalPlacement m_vert_pos = VerticalPlacement::Top;
-		Docking m_docking = Docking::Outer;
-	private:
-
-	};
-}
+//namespace dvis
+//{
+//class Title
+//{
+//public:
+//	Title(const std::string& title) :
+//		m_title(title)
+//	{
+//
+//	}
+//	std::string m_title;
+//	HorizontalPlacement m_horiz_pos = HorizontalPlacement::Centre;
+//	VerticalPlacement m_vert_pos = VerticalPlacement::Top;
+//	Docking m_docking = Docking::Outer;
+//private:
+//
+//};
+//}

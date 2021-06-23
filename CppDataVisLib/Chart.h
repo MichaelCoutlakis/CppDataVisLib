@@ -10,17 +10,17 @@
 
 #include "Types.h"
 
-namespace dvis
-{
-	class Chart
-	{
-	public:
-		//std::vector<std::shared_ptr
-		virtual void SetChartArea(const RectArea& Area) = 0;
-
-
-		virtual void Zoom(CoordXY LowerLeft, CoordXY UpperRight) = 0;
-
-
-	};
-}
+//namespace dvis
+//{
+//	class Chart
+//	{
+//	public:
+//		//std::vector<std::shared_ptr
+//		virtual void SetChartArea(const RectArea& Area) = 0;
+//
+//
+//		virtual void Zoom(CoordXY LowerLeft, CoordXY UpperRight) = 0;
+//
+//
+//	};
+//}
